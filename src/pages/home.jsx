@@ -14,6 +14,21 @@ import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import { Button as FlowbiteButton } from "flowbite-react"; // Rename Button from flowbite-react to avoid conflict
+
+// Define the Component function outside of the Home component's JSX
+function Component() {
+  return (
+    <div className="flex flex-wrap justify-center items-center gap-2"> {/* Centering the content horizontally */}
+      <div className="mt-7">
+      <FlowbiteButton outline gradientDuoTone="greenToBlue">
+        Try Optifix
+      </FlowbiteButton>
+      </div>
+    </div>
+  );
+}
+
 
 export function Home() {
   return (
@@ -36,6 +51,7 @@ export function Home() {
                 Material Tailwind. It features multiple components based on the
                 Tailwind CSS and Material Design by Google.
               </Typography>
+              <Component /> {/* Include the Component here */}
             </div>
           </div>
         </div>
@@ -108,7 +124,6 @@ export function Home() {
           </div>
         </div>
       </section>
-     
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
           <PageTitle section="Co-Working" heading="Build something">
@@ -135,11 +150,9 @@ export function Home() {
                 <Typography className="font-normal text-blue-gray-500">
                   {description}
                 </Typography>
-                
               </Card>
             ))}
           </div>
-          
         </div>
       </section>
       <div className="bg-white">

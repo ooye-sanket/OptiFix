@@ -5,10 +5,22 @@ import {
   Navbar as MTNavbar,
   MobileNav,
   Typography,
-  Button,
+  Button as MTButton, // Rename Button from @material-tailwind/react to MTButton
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "flowbite-react";
+
+// Define the Component function outside of defaultProps
+function Component() {
+  return (
+    <div className="flex flex-wrap gap-2">
+      <Button outline gradientDuoTone="greenToBlue">
+        Try Optifix
+      </Button>
+    </div>
+  );
+}
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -74,9 +86,9 @@ export function Navbar({ brandName, routes, action }) {
             href="https://www.material-tailwind.com/blocks?ref=mtkr"
             target="_blank"
           >
-            <Button variant="text" size="sm" color="white" fullWidth>
+            <MTButton variant="text" size="sm" color="white" fullWidth> {/* Use MTButton instead of Button */}
               pro version
-            </Button>
+            </MTButton>
           </a>
           {React.cloneElement(action, {
             className: "hidden lg:inline-block",
@@ -107,9 +119,9 @@ export function Navbar({ brandName, routes, action }) {
             target="_blank"
             className="mb-2 block"
           >
-            <Button variant="text" size="sm" fullWidth>
+            <MTButton variant="text" size="sm" fullWidth> {/* Use MTButton instead of Button */}
               pro version
-            </Button>
+            </MTButton>
           </a>
           {React.cloneElement(action, {
             className: "w-full block",
@@ -121,17 +133,8 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "OPtifix",
-  action: (
-    <a
-      
-      target="_blank"
-    >
-      <Button variant="gradient" size="sm" fullWidth>
-        free download
-      </Button>
-    </a>
-  ),
+  brandName: "Optifix", // Corrected the default brandName value
+  action: <Component />, // Use Component directly as the default action
 };
 
 Navbar.propTypes = {
