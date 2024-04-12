@@ -10,17 +10,31 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "flowbite-react";
+import { motion } from "framer-motion";
+
+
 
 // Define the Component function outside of defaultProps
 function Component() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Button outline gradientDuoTone="greenToBlue">
-        Try Optifix
-      </Button>
+      <div className="mt-7">
+        <motion.div
+          whileHover={{
+            scale: 1.1, // Scale up by 10% on hover
+            boxShadow: "0 4px 12px rgba(138, 43, 226, 0.5)", // Purple shadow on hover
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <Button color="greenToBlue" outline={true}>
+            Try Optifix
+          </Button>
+        </motion.div>
+      </div>
     </div>
   );
 }
+
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -86,8 +100,8 @@ export function Navbar({ brandName, routes, action }) {
             href="https://www.material-tailwind.com/blocks?ref=mtkr"
             target="_blank"
           >
-            <MTButton variant="text" size="sm" color="white" fullWidth> {/* Use MTButton instead of Button */}
-              pro version
+            <MTButton variant="text" size="sm" color="purple" fullWidth> {/* Use MTButton instead of Button */}
+              
             </MTButton>
           </a>
           {React.cloneElement(action, {
@@ -133,7 +147,7 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "Optifix", // Corrected the default brandName value
+  brandName: "", // Corrected the default brandName value
   action: <Component />, // Use Component directly as the default action
 };
 

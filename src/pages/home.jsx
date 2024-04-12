@@ -15,15 +15,25 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import { Button as FlowbiteButton } from "flowbite-react"; // Rename Button from flowbite-react to avoid conflict
+import { motion } from 'framer-motion';
+
 
 // Define the Component function outside of the Home component's JSX
 function Component() {
   return (
     <div className="flex flex-wrap justify-center items-center gap-2"> {/* Centering the content horizontally */}
       <div className="mt-7">
-      <FlowbiteButton outline gradientDuoTone="greenToBlue">
-        Try Optifix
-      </FlowbiteButton>
+        <motion.div
+          whileHover={{
+            scale: 1.1, // Scale up by 10% on hover
+            boxShadow: '0 4px 12px rgba(138, 43, 226, 0.6)', // Purple shadow effect on hover
+          }}
+          transition={{ duration: 0.3 }} // Animation duration of 0.3 seconds
+        >
+          <FlowbiteButton outline gradientDuoTone="greenToBlue" className="hover:text-purple-600">
+            Try Optifix
+          </FlowbiteButton>
+        </motion.div>
       </div>
     </div>
   );
@@ -34,23 +44,62 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/backgroung5.svg')] bg-cover bg-center" />
+        {/* <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" /> */}
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-6 font-black"
-              >
-                Your story starts with us.
-              </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
-              </Typography>
+            <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, ease: 'easeInOut' }}
+>
+<Typography
+  variant="h1"
+  color="white"
+  className="mb-8 font-black"
+>
+  Home of
+  <motion.span
+    style={{ color: 'purple' }}
+    initial={{ opacity: 0, y: -20 }} // Start with the text invisible and slightly above
+    animate={{ opacity: 1, y: 0 }} // Animate to visible and at the original position
+    transition={{ duration: 0.5, delay: 0.5 }} // Animation duration and delay for effect
+  >
+    Clean
+  </motion.span>
+  ,
+  <motion.span
+    style={{ color: 'purple', marginLeft: '5px' }} // Add a margin for better spacing
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 1.0 }} // Adjust the delay for each word
+  >
+    safe
+  </motion.span>
+  ,
+  <motion.span
+  style={{ color: 'purple', marginLeft: '5px' }}
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 1.5 }} // Adjust the delay for each word
+>
+  secure
+</motion.span>
+  code.
+</Typography>
+
+
+  
+</motion.div>
+
+<Typography variant="lead" color="white" className="opacity-80">
+  Customizable <span className="text-purple-200">static code analysis</span> that works in your <span className="text-purple-200">real-time application</span> and more.
+  Advanced <span className="text-purple-200">error detection</span> and <span className="text-purple-200">optimize</span> for your real-time application.
+</Typography>
+
+
+
               <Component /> {/* Include the Component here */}
             </div>
           </div>
