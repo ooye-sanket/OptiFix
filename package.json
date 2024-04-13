@@ -30,5 +30,9 @@
     "prettier-plugin-tailwindcss": "0.5.6",
     "tailwindcss": "3.3.4",
     "vite": "4.5.0"
-  }
+  },
+  "description": "![version](https://img.shields.io/badge/version-2.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-tailwind-kit-react.svg)](https://github.com/creativetimofficial/material-tailwind-kit-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-tailwind-kit-react.svg)](https://github.com/creativetimofficial/material-tailwind-kit-react/issues?q=is%3Aissue+is%3Aclosed)",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
 }
