@@ -1,11 +1,5 @@
-import React from "react";
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import React, { useEffect } from "react";
+import { Card, CardBody, CardHeader, Typography, Button } from "@material-tailwind/react";
 import { FingerPrintIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard } from "@/widgets/cards";
@@ -13,6 +7,8 @@ import { featuresData, contactData } from "@/data";
 import { Button as FlowbiteButton } from "flowbite-react";
 import { motion } from 'framer-motion';
 import Typed from 'typed.js'; // Import Typed.js library
+import { MdGroups } from "react-icons/md";
+
 
 function Component() {
   return (
@@ -34,24 +30,23 @@ function Component() {
   );
 }
 
-export function Home() {
-  React.useEffect(() => {
-    // Function to initialize Typed.js
-    function initializeTyped() {
-      return new Typed('#element', {
-        strings: [
-          '<span class="text-purple-600">Clean</span>',
-          '<span class="text-purple-600">Safe</span>',
-          '<span class="text-purple-600">Secure</span>'
-        ],
-        typeSpeed: 100,
-        contentType: 'html', // Set content type to html to render HTML entities
-        onComplete: function(self) { // Callback function when animation completes
-          self.reset(); // Reset the Typed.js instance to start over
-        }
-      });
+function initializeTyped() {
+  return new Typed('#element', {
+    strings: [
+      '<span class="text-purple-600">Clean</span>',
+      '<span class="text-purple-600">Safe</span>',
+      '<span class="text-purple-600">Secure</span>'
+    ],
+    typeSpeed: 100,
+    contentType: 'html', // Set content type to html to render HTML entities
+    onComplete: function(self) { // Callback function when animation completes
+      self.reset(); // Reset the Typed.js instance to start over
     }
+  });
+}
 
+export function Home() {
+  useEffect(() => {
     // Initialize Typed.js
     const typed = initializeTyped();
 
@@ -100,12 +95,58 @@ export function Home() {
               />
             ))}
           </div>
+          <div className="mt-32 flex flex-wrap items-center">
+            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
+                <MdGroups className="h-8 w-8 text-white " />
+              </div>
+              <Typography
+                variant="h3"
+                className="mb-3 font-bold"
+                color="blue-gray"
+              >
+                About us.
+              </Typography>
+              <Typography className="mb-8 font-normal text-blue-gray-500">
+              OptiFix is a tool that enhances coding efficiency by optimizing code performance and generating automated documentation
+                <br />
+                <br />
+                It provides features like creating and sharing smart code snippets for improved collaboration. Dependency management helps resolve issues with outdated libraries, while code profiling identifies performance bottlenecks. OptiFix streamlines code development and maintenance, leading to smoother and more efficient coding workflows.
+              </Typography>
+              <Button variant="filled">Try Optifix</Button>
+            </div>
+            <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
+              <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
+                <CardHeader floated={false} className="relative h-56">
+                  <img
+                    alt="Card Image"
+                    src="/img/optifixteam1.svg"
+                    className="h-full w-full"
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Typography variant="small" color="blue-gray" className="font-normal">Develper Friendly</Typography>
+                  <Typography
+                    variant="h5"
+                    color="blue-gray"
+                    className="mb-3 mt-2 font-bold"
+                  >
+                    OptiFix Services
+                  </Typography>
+                  <Typography className="font-normal text-blue-gray-500">
+                   
+Boosts coding efficiency by optimizing performance, automating documentation, creating smart snippets, managing dependencies, and profiling code for better workflows.
+                  </Typography>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
-          <PageTitle section="Co-Working" heading="Build something">
-            Put the potentially record low maximum sea ice extent this year down to low ice. According to the National Oceanic and Atmospheric Administration, Ted Scambos.
+          <PageTitle section="" heading="We support the most popular languages and libraries">
+            
           </PageTitle>
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (

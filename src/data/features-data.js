@@ -1,50 +1,60 @@
 import {
   ChatBubbleBottomCenterTextIcon,
 } from "@heroicons/react/24/solid";
+import { GoPackageDependencies } from "react-icons/go";
+import { FaCode } from "react-icons/fa";
+import { MdOutlineSecurity } from "react-icons/md";
+import { SiCodereview } from "react-icons/si";
+import { MdDocumentScanner } from "react-icons/md";
+import { GrOptimize } from "react-icons/gr";
+
+
 
 export const featuresData = [
   {
     color: "gray",
-    title: "Awarded Agency",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Dependency Management",
+    icon: GoPackageDependencies,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "manage code dependencies, help users identify and resolve issues with outdated or incompatible libraries and packages.",
   },
   {
     color: "gray",
-    title: "Awarded Agency",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Generate Code Snippet",
+    icon: FaCode,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "Generate and share smart code snippets with the world or with your team.",
   },
   {
     color: "gray",
-    title: "Awarded Agency",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Secure Code Analysis",
+    icon: MdOutlineSecurity,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      " Scanning detects and resolves security vulnerabilities in code, ensuring robust protection against cyber threats.",
+  },
+  
+  {
+    color: "gray",
+    title: "Code Profiling",
+    icon: SiCodereview,
+    description:
+      "Offer insights on code performance, including execution time, memory usage, and resource bottlenecks, aiding in code optimization.",
   },
   {
     color: "gray",
-    title: "Awarded Agency",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Automaed Code Documentation",
+    icon: MdDocumentScanner,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "Generate documentation from the code automatically, including comments, function signatures, and explanations of code functionality",
   },
   {
     color: "gray",
-    title: "Free Revisions",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Optimization",
+    icon: GrOptimize,
     description:
-      "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.",
+      "Optimizing code involves improving the efficiency and performance of a program without altering its external behavior..",
   },
-  {
-    color: "gray",
-    title: "Verified Company",
-    icon: ChatBubbleBottomCenterTextIcon,
-    description:
-      "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!",
-  },
+ 
 ];
 
 export default featuresData;

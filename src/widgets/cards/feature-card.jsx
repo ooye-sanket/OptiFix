@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import {
   Card,
@@ -6,9 +7,10 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
+
 export function FeatureCard({ color, icon, title, description }) {
   return (
-    <Card className="rounded-lg shadow-lg shadow-gray-500/10">
+    <Card className={`rounded-lg shadow-lg shadow-gray-500/10 border-4 border--600 hover:scale-105 transition-transform`}>
       <CardBody className="px-8 text-center">
         <IconButton
           variant="gradient"

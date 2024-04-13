@@ -3,40 +3,48 @@ import {
   ChartBarIcon,
   PlayIcon,
 } from "@heroicons/react/24/solid";
+import { SiCplusplus } from "react-icons/si";
+import { BsFiletypeYml } from "react-icons/bs";
+import { FaJava } from "react-icons/fa";
+import { TbBrandKotlin } from "react-icons/tb";
+import { SiPython } from "react-icons/si";
+import { DiRuby } from "react-icons/di";
+
+
 
 export const contactData = [
   {
-    title: "Excelent Services",
-    icon: BriefcaseIcon,
+    title: "C++",
+    icon: SiCplusplus,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Excelent Services",
-    icon: BriefcaseIcon,
+    title: "Ruby",
+    icon: DiRuby,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Excelent Services",
-    icon: BriefcaseIcon,
+    title: "YML",
+    icon: BsFiletypeYml,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },{
-    title: "Excelent Services",
-    icon: BriefcaseIcon,
+    title: "Java",
+    icon: FaJava,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Grow Your Market",
-    icon: ChartBarIcon,
+    title: "Kotlin",
+    icon: TbBrandKotlin,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Launch Time",
-    icon: PlayIcon,
+    title: "Python",
+    icon: SiPython,
     description:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
