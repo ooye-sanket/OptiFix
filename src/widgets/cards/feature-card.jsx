@@ -10,7 +10,7 @@ import {
 
 export function FeatureCard({ color, icon, title, description }) {
   return (
-    <Card className={`rounded-lg shadow-lg shadow-gray-500/10 border-4 border--600 hover:scale-105 transition-transform`}>
+    <Card className={`rounded-lg border-4 border--600 hover:scale-105 transition-transform`} style={{ boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)" }}>
       <CardBody className="px-8 text-center">
         <IconButton
           variant="gradient"

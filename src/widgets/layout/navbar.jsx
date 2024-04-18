@@ -9,12 +9,8 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Button } from "flowbite-react";
 import { motion } from "framer-motion";
 
-
-
-// Define the Component function outside of defaultProps
 function Component() {
   return (
     <div className="flex flex-wrap gap-2">
@@ -26,15 +22,14 @@ function Component() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <Button color="greenToBlue" outline={true}>
+          <MTButton style={{ backgroundColor: "black", color: "white" }} outline={true}>
             Try Optifix
-          </Button>
+          </MTButton>
         </motion.div>
       </div>
     </div>
   );
 }
-
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
