@@ -144,7 +144,7 @@ Footer.defaultProps = {
   ],
   copyright: (
     <>
-      Copyright © {year} Material Tailwind by{" "}
+      Copyright © {year} {" "}
       <a
         href="https://www.creative-tim.com?ref=mtk"
         target="_blank"
