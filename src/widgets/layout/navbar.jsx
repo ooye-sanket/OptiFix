@@ -10,6 +10,8 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { Button as FlowbiteButton } from "flowbite-react";
+
 
 function Component() {
   return (
@@ -22,9 +24,9 @@ function Component() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <MTButton style={{ backgroundColor: "black", color: "white" }} outline={true} href="https://optifixai.netlify.app/">
-            Try Optifix
-          </MTButton>
+          <FlowbiteButton  className="hover:text-purple-600 bg-black border-black" href="https://optifixai.netlify.app/">
+  Try Optifix
+</FlowbiteButton>
         </motion.div>
       </div>
     </div>
