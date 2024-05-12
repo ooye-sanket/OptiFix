@@ -10,7 +10,15 @@ import { TbBrandKotlin } from "react-icons/tb";
 import { SiPython } from "react-icons/si";
 import { DiRuby } from "react-icons/di";
 
-
+// Define a mapping of programming languages to colors
+const languageColors = {
+  "C++": "blue",
+  "Ruby": "red",
+  "YML": "yellow",
+  "Java": "orange",
+  "Kotlin": "green",
+  "Python": "purple",
+};
 
 export const contactData = [
   {
@@ -49,5 +57,9 @@ export const contactData = [
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
 ];
+
+export const getColorForLanguage = (language) => {
+  return languageColors[language] || "gray"; // Default to gray if no color is defined
+};
 
 export default contactData;
