@@ -22,7 +22,10 @@ function Component() {
           }}
           transition={{ duration: 0.3 }}
         >
-         <FlowbiteButton  className="hover:text-purple-600 bg-black border-black">
+         <FlowbiteButton  className="hover:text-purple-600 bg-black border-black" href="https://optifixai.netlify.app/">
+  
+
+
   Try Optifix
 </FlowbiteButton>
         </motion.div>
@@ -113,7 +116,7 @@ export function Home() {
                 <br />
                 It provides features like creating and sharing smart code snippets for improved collaboration. Dependency management helps resolve issues with outdated libraries, while code profiling identifies performance bottlenecks. OptiFix streamlines code development and maintenance, leading to smoother and more efficient coding workflows.
               </Typography>
-              <Button variant="filled">Try OptiFix</Button>
+              <Button variant="filled" href="https://optifixai.netlify.app/">Try OptiFix</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg border border-gray-500/10 rounded-lg">

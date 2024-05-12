@@ -22,7 +22,7 @@ function Component() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <MTButton style={{ backgroundColor: "black", color: "white" }} outline={true}>
+          <MTButton style={{ backgroundColor: "black", color: "white" }} outline={true} href="https://optifixai.netlify.app/">
             Try Optifix
           </MTButton>
         </motion.div>
